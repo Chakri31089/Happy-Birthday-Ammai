@@ -43,11 +43,11 @@
             position: absolute;
             width: 100%;
             max-width: 800px;
-            padding: 40px;
+            padding: 15px;
             background: rgba(255, 255, 255, 0.509);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             text-align: center;
             opacity: 0;
             transform: translateY(20px);
@@ -75,8 +75,8 @@
         }
 
         .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(236, 72, 153, 0.4);
+            transform: linear-gradient(to bottom, #2196f3, #f44336);
+            box-shadow: 0 6px 15px rgba(236, 54, 153, 0.4);
         }
 
         .btn:active {
@@ -383,6 +383,64 @@
             }, { once: true });
         });
 
+        // Special Effect Function
+        function triggerSpecialEffect() {
+            // Standard confetti
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#ff0000', '#ff69b4', '#ff1493', '#ffc0cb']
+            });
+
+            // Heart-shaped confetti
+            setTimeout(() => {
+                confetti({
+                    particleCount: 30,
+                    spread: 60,
+                    origin: { y: 0.5 },
+                    shapes: ['heart'],
+                    colors: ['#ff0000', '#ff69b4']
+                });
+            }, 250);
+
+            // More hearts from different directions
+            setTimeout(() => {
+                confetti({
+                    particleCount: 20,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    shapes: ['heart'],
+                    colors: ['#ff0000', '#ff69b4']
+                });
+
+                confetti({
+                    particleCount: 20,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    shapes: ['heart'],
+                    colors: ['#ff0000', '#ff69b4']
+                });
+            }, 250);
+
+            // Make hearts float up from the background
+            hearts.forEach(heart => {
+                gsap.to(heart.position, {
+                    y: heart.position.y + 30,
+                    duration: 3,
+                    ease: "power1.out"
+                });
+
+                gsap.to(heart.material, {
+                    opacity: 0,
+                    duration: 3,
+                    ease: "power1.out"
+                });
+            });
+        }
+
         // Step Navigation
         let currentStep = 1;
         const totalSteps = 5;
@@ -410,83 +468,34 @@
             }
         }
 
-        // Button event listeners
+        // Button event listeners with special effect
         document.getElementById('start-btn').addEventListener('click', () => {
+            triggerSpecialEffect();
             currentStep = 2;
             showStep(currentStep);
         });
 
         document.getElementById('next-btn-2').addEventListener('click', () => {
+            triggerSpecialEffect();
             currentStep = 3;
             showStep(currentStep);
         });
 
         document.getElementById('next-btn-3').addEventListener('click', () => {
+            triggerSpecialEffect();
             currentStep = 4;
             showStep(currentStep);
         });
 
         document.getElementById('next-btn-4').addEventListener('click', () => {
+            triggerSpecialEffect();
             currentStep = 5;
             showStep(currentStep);
         });
 
         // Confetti button
         document.getElementById('confetti-btn').addEventListener('click', () => {
-            // Standard confetti
-            confetti({
-                particleCount: 150,
-                spread: 70,
-                origin: { y: 0.6 },
-                colors: ['#ff0000', '#ff69b4', '#ff1493', '#ffc0cb']
-            });
-
-            // Heart-shaped confetti
-            setTimeout(() => {
-                confetti({
-                    particleCount: 30,
-                    spread: 60,
-                    origin: { y: 0.5 },
-                    shapes: ['heart'],
-                    colors: ['#ff0000', '#ff69b4']
-                });
-            }, 300);
-
-            // More hearts from different directions
-            setTimeout(() => {
-                confetti({
-                    particleCount: 20,
-                    angle: 60,
-                    spread: 55,
-                    origin: { x: 0 },
-                    shapes: ['heart'],
-                    colors: ['#ff0000', '#ff69b4']
-                });
-
-                confetti({
-                    particleCount: 20,
-                    angle: 120,
-                    spread: 55,
-                    origin: { x: 1 },
-                    shapes: ['heart'],
-                    colors: ['#ff0000', '#ff69b4']
-                });
-            }, 600);
-
-            // Make hearts float up from the background
-            hearts.forEach(heart => {
-                gsap.to(heart.position, {
-                    y: heart.position.y - 30,
-                    duration: 3,
-                    ease: "power1.out"
-                });
-
-                gsap.to(heart.material, {
-                    opacity: 0,
-                    duration: 3,
-                    ease: "power1.out"
-                });
-            });
+            triggerSpecialEffect();
         });
 
         // Initialize progress bar
