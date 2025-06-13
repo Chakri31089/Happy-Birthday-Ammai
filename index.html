@@ -5,7 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Someone Special ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&family=Shantell+Sans:wght@400;600&family=Dancing+Script&family=Raleway:wght@400;600&family=Merriweather:wght@400;700&family=Pacifico&family=Quicksand:wght@400;600&family=Lobster&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'Inter', 'sans-serif'],
+              shantell: ['Shantell Sans', 'cursive'],
+              raleway: ['Raleway', 'sans-serif'],
+              merriweather: ['Merriweather', 'serif'],
+              dancing: ['Dancing Script', 'cursive'],
+              pacifico: ['Pacifico', 'cursive'],
+              quicksand: ['Quicksand', 'sans-serif'],
+              lobster: ['Lobster', 'cursive']
+            }
+          }
+        }
+      }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
@@ -13,7 +32,7 @@
         body {
             margin: 0;
             overflow: hidden;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Shantell Sans', sans-serif;
             height: 100vh;
             touch-action: manipulation;
             background: linear-gradient(135deg, #f9a8d4, #f3e8ff);
@@ -186,7 +205,7 @@
             <div class="step active" id="step1">
                 <div class="emoji heart-beat">❤️</div>
                 <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">Hey Ammai!</h1>
-                <p class="text-xl text-gray-700 mb-8">I made something special for you maa...🥰💫</p>
+                <p class="text-xl text-blue-700 mb-8">I made something special for you maa...🥰💫</p>
                 <button class="btn" id="start-btn">Let's Begin</button>
             </div>
 
@@ -194,7 +213,7 @@
             <div class="step" id="step2">
                 <div class="emoji">🎉</div>
                 <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gradient">Wish you many many more happy returns of the day Ammai!</h2>
-                <p class="text-lg text-gray-700 mb-6">
+                <p class="text-lg text-blue-700 mb-6">
                     You're a very special girl 🥰💝 and someone who's always on my mind 😌, but know that I'm thinking of you just that little bit more so today😁! I hope you have the truly fabulous day 🥰😌 that you deserve!🥰💫.I feel so lucky to have you as my Spl Fav Person 💓.Hope your birthday is as special as you are 🤗.I am looking forward to many more years of our bond and birthdays with you💖. I am grateful that you are a part of my life🩷. In good times and bad, I'll always be by your side 🩷✨.
                 </p>
                 <button class="btn" id="next-btn-2">What makes you special?</button>
@@ -207,17 +226,17 @@
                     <div class="reason-card">
                         <div class="emoji text-3xl">🥰💫</div>
                         <h3 class="text-xl font-bold mb-2 text-pink-600">Your Beautiful Smile!</h3>
-                        <p class="text-gray-700">It brings comfort, joy, and warmth like sunshine on a cloudy day.</p>
+                        <p class="text-blue-700">It brings comfort, joy, and warmth like sunshine on a cloudy day.</p>
                     </div>
                     <div class="reason-card">
                         <div class="emoji text-3xl">👀🫶🏻</div>
                         <h3 class="text-xl font-bold mb-2 text-pink-600">Your Pretty Eyes!</h3>
-                        <p class="text-gray-700">They reflect so much care, depth, and love. Just looking into them feels like home.</p>
+                        <p class="text-blue-700">They reflect so much care, depth, and love. Just looking into them feels like home.</p>
                     </div>
                     <div class="reason-card">
                         <div class="emoji text-3xl">💗🫠</div>
                         <h3 class="text-xl font-bold mb-2 text-pink-600">Your Amazing Personality!</h3>
-                        <p class="text-gray-700">You have a calming presence and a heart full of goodness anyone is lucky to have you in their life.</p>
+                        <p class="text-blue-700">You have a calming presence and a heart full of goodness anyone is lucky to have you in their life.</p>
                     </div>
                 </div>
                 <button class="btn" id="next-btn-3">A Little Surprise</button>
@@ -232,9 +251,9 @@
                         <img src="crush.png" height="200" width="200" alt="">
                         <img src="Ammai.jpg" height="200" width="200" alt="">
                     </div>
-                    <p class="text-lg text-gray-700 italic mt-2">(Do you remember our very first favorite memory we spent together here!)</p>
+                    <p class="text-lg text-darkblue-700 italic mt-2">(Do you remember our very first favorite memory we spent together here!)</p>
                 </div>
-                <p class="text-lg text-gray-700 mb-6">
+                <p class="text-lg text-blue-700 mb-6">
                     Every moment with you becomes a cherished memory. Whether we're laughing together or just enjoying
                     the silence, time with you is always special💗💫.
                 </p>
@@ -245,18 +264,23 @@
             <div class="step" id="step5">
                 <div class="emoji">🎂</div>
                 <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gradient">My Birthday Wishes For You Madem Ji!</h2>
-                <p class="text-lg text-gray-700 mb-8">
-                    Happy Birthday to my most special and favorite person! 🎉🎂💖 On this beautiful day 🌞, I just want to remind you how incredibly important you are to me and how much joy 😄💫 you bring into my life every single day. 🌟 Your smile 😊 is my sunshine ☀️, your voice 🎶 is my comfort 🤗, and your presence is my peace 🕊️. You’ve touched my heart ❤️ in ways words can never fully express 📝, and I am beyond grateful 🙏 to have someone as amazing, caring, and wonderful as you in my life 💕🌈. Every moment with you is a memory I cherish 💭📸, and today, I hope the universe 🌌 showers you with all the love 💗, happiness 😍, and blessings 🙌 that you so richly deserve 🎁✨. May this year bring you closer to your dreams 🌠, surround you with true happiness 😇, and fill your heart 💞 with laughter 😂 and love 💖. 🥳🎈 No matter where life takes us 🌍, always know that you'll have a special place in my heart 💓—today and forever ♾️. 💝💐 Happy Birthday once again, my Dear Ammai! 🌻🌸🎊
+                <p class="text-lg text-blue-700 mb-8">
+                    Happy Birthday to my most special and favorite person! 🎉🎂💖 On this beautiful day 🌞, I just want to remind you how incredibly important you are to me and how much joy 😄💫 you bring into my life every single day. 🌟 Your smile 😊 is my sunshine ☀️, your voice 🎶 is my comfort 🤗, and your presence is my peace 🕊️. You've touched my heart ❤️ in ways words can never fully express 📝, and I am beyond grateful 🙏 to have someone as amazing, caring, and wonderful as you in my life 💕🌈. Every moment with you is a memory I cherish 💭📸, and today, I hope the universe 🌌 showers you with all the love 💗, happiness 😍, and blessings 🙌 that you so richly deserve 🎁✨. May this year bring you closer to your dreams 🌠, surround you with true happiness 😇, and fill your heart 💞 with laughter 😂 and love 💖. 🥳🎈 No matter where life takes us 🌍, always know that you'll have a special place in my heart 💓 today and forever ♾️.</p>
+                <p class="text-lg text-darkblue-800 mb-8">
+                    Wishing You Once Again Happy Birthday, My Dear Ammai! 🫶🏻💗
                 </p>
-                <p class="text-xl font-semibold text-pink-600 mb-10">#Potti Pilla! ❤️✨</p>
-                <button class="btn" id="confetti-btn">Celebrate!</button>
+                <!-- <p class="text-xl font-semibold text-pink-600 mb-3">#Potti Pilla!</p> -->
+                <p class="text-xl font-semibold text-pink-600 mb-3">#Madem Ji! 💖💫</p>
+                <p class="text-xl font-semibold text-pink-600 mb-3">#Special One! 💗🫶🏻</p>
+
+                <button class="btn" id="confetti-btn">Celebrate! 🎉</button>
                 <p class="mt-8 text-gray-500">Made with ❤️ just for you</p>
             </div>
         </div>
     </div>
 
     <script>
-        // Three.js Heart Background
+         // Three.js Heart Background
         const container = document.getElementById('canvas-container');
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
